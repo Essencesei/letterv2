@@ -22,8 +22,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   password!: FormControl;
   subscription!: Subscription;
 
-  @Output() ev = new EventEmitter<any>();
-
   constructor(
     private service: ServiceService,
     private auth: AuthService,
@@ -45,10 +43,11 @@ export class LoginComponent implements OnInit, OnDestroy {
         this.auth.isLogged().subscribe({
           next: (val) => {
             val.isLogged = true;
-            this.ev.emit({ isLogged: val.isLogged, decode: val.decode });
+            console.log(val);
           },
         });
-        this.router.navigate(['/home']);
+
+        this.router.navigate(['/home']).then(() => window.location.reload());
       },
     });
   }

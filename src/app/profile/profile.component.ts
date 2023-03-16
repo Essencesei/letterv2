@@ -25,7 +25,9 @@ export class ProfileComponent implements OnInit, OnDestroy {
       });
   }
   deleteAll() {
-    this.subscription = this.service.deleteAll().subscribe();
+    this.subscription = this.service
+      .deleteAll()
+      .subscribe({ next: () => window.location.reload() });
     // this.subscription.unsubscribe();
     this.subscription = this.service
       .getUserPostsById(this.route.snapshot.paramMap.get('id'))

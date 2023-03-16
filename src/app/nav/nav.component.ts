@@ -33,7 +33,7 @@ export class NavComponent implements OnInit, OnDestroy {
 
   logout() {
     localStorage.removeItem('token');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/login']).then(() => window.location.reload());
     this.subscription = this.auth.isLogged().subscribe({
       next: (val) => {
         console.log(val);
