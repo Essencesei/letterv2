@@ -1,0 +1,16 @@
+<h1>Login</h1>
+<form [formGroup]="cred" (ngSubmit)="login(cred)">
+  <input
+    type="text"
+    name=""
+    placeholder="Username"
+    formControlName="username"
+  />
+  <input
+    type="password"
+    name=""
+    placeholder="Password"
+    formControlName="password"
+  />
+  <button type="submit">Login</button>
+</form>

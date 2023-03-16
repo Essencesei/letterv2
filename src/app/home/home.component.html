@@ -1,0 +1,12 @@
+<h1>Public Posts</h1>
+
+<div class="container">
+  <div class="card" *ngFor="let el of posts">
+    <div class="subject">{{ el.subject }}</div>
+    <div class="from">From: {{ el.from }}</div>
+    <div class="body">{{ el.body }}</div>
+    <!-- <div class="reaction">{{ el.reactCount }}</div> -->
+    <div class="time">{{ el.createdAt | date : "medium" }}</div>
+  </div>
+</div>
+<div *ngIf="posts.length === 0" class="emp">Empty</div>

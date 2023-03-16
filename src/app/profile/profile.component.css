@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card {
+  padding: 1rem;
+  background-color: rgb(53, 53, 104);
+  color: white;
+  border-radius: 5px;
+}
+.subject {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.body {
+  padding: 1rem 3rem;
+}
+.time {
+  font-size: 0.8rem;
+}
+
+.emp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
